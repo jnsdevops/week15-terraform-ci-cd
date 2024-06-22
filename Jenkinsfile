@@ -7,14 +7,24 @@ pipeline {
                 sh 'terraform init'
             }
         }
-        stage('test') {
+        stage('format') {
             steps {
-                echo 'Hello test'
+                sh 'terraform fmt'
             }
         }
-            stage('design') {
+        stage('validate') {
             steps {
-                echo 'Hello design'
+                sh 'terraform validate'
+            }
+        }
+        stage('plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+        stage('apply') {
+            steps {
+                sh 'terraform apply'
             }
         }
     }
