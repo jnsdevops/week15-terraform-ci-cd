@@ -12,9 +12,9 @@ pipeline {
                sh 'terraform fmt'
             }
         }
-        stage('validates') {
+        stage('validate') {
             steps {
-                sh 'terraform validates'
+                sh 'terraform validate'
             }
         }
         stage('plan') {
