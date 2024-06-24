@@ -4,11 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "4.61.0"
     }
-
   }
 }
 
 provider "aws" {
-  region  = var.region
-//  profile = "default"
+  region = var.region
+  // profile = "default"
 }
