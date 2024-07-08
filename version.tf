@@ -8,5 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  region  = var.region # Ensure this matches the profile in your AWS CLI configuration
+  region  = var.aws_region
+   profile = var.profile # Ensure this matches the profile in your AWS CLI configuration
 }

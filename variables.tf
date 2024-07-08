@@ -3,8 +3,14 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "region" {
-  description = "The AWS region to deploy resources in"
+variable "aws_region" {
+  description = "This is aws region"
+  default     = "us-east-1"
   type        = string
-  default     = "us-east-1" # Or your specific region
+}
+
+
+variable "profile" {
+  description = "user account to use"
+  default     = "default"
 }
